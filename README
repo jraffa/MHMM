@@ -1,0 +1,44 @@
+
+This is the accompanying code for Raffa JD and Dubin JA (2014):
+"Multivariate Longitudinal Data Analysis with Mixed Effects Hidden Markov Models"
+
+For updates please check:  http://github.com/jraffa/MHMM
+
+
+We've included two files (in addition to this one):
+
+ff-final.R: includes library functions including some R/C++ code (version 0.002).
+This includes a function to generate simulated (genSim) data from the models considered in the paper
+in addition to a Gibbs sampling algorithm for the approach outlined in the paper (simulated).
+Both functions are documented in this file, but it's probably easiest to start with the example file:
+
+example.R: has an example using both functions.
+
+
+These functions depend on a number of R libraries, all of which are available at CRAN:
+
+Rcpp, RcppArmadillo, inline, MCMCpack, and mvtnorm.
+
+If you run this on a Windows machine you should download R-tools, which include a C++ compiler that will compile the embedded c++ code.
+The process should be entirely automated, and we have tested this on both Linux and Windows.  For reference, we were using:
+
+Rcpp version 0.11.2
+RcppArmadillo version 0.4.300.8.0
+inline version 0.3.13 
+MCMCpack version 1.3-3
+mvtnorm version 0.9-99992
+
+all on R version 3.1.0 or 3.1.1 with R tools 3.1 for Windows.
+
+
+Keep in mind this code is still very experimental.  Use with caution!
+It can also take quite a long time to run.
+In our example using the smoking cessation example, for 354 smokers, each
+measured at most at six time points, we typically ran the MCMC algorithm for >3M iterations.
+This can easily take the better part of 24 hrs.
+
+We will continue to develop this code at: http://github.com/jraffa/MHMM
+so please check there for updates, patches, and extensions.
+
+Please e-mail questions to: jraffa@uw.edu and make sure to indicate what version of this software you are using,
+ and include other relevant R information (version, package versions, etc).
