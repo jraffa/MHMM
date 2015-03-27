@@ -36,7 +36,7 @@
 #	rx: treatment dummy variables
 #	pars: parameter vector used to simulate data (useful for thinking specifying possible starting values)
 #######
-mhmmversion <- 0.002;
+mhmmversion <- 0.003;
 
 genSim <- function(N=354,ni=6,hs=3,tau1=c(-3,5,5),mi=7,tau2=c(1.2,1.2,1.1),
 residinvvar=10,reSigma=matrix(c(6.0,0.5,0.5,0.1),nr=2),P0=matrix(c(0.85,0.6,0.1,0.1,0.2,0.1,0.05,0.2,0.8),nr=3),Pi0=c(0.6,0.25,0.15),
