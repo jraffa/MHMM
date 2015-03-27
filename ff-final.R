@@ -1,4 +1,4 @@
-## Version 0.002
+## Version 0.003
 ## This code is from Raffa JD and Dubin JA (2014) "Multivariate Longitudinal Data Analysis with Mixed Effects Hidden Markov Models."
 ## It contains two main functions to simulate multivariate response longitudinal data arises from a hidden Markov Model, 
 ## and implementation of a MCMC approach to estimate the parameters from such models.  For further details see:
@@ -23,7 +23,7 @@
 #	rx: binary vector of treatment indicators of length N; if not specified assumes not treatment effect!
 #	P1: hidden state tpm for treatment group (same as P0, requires rx to be specified); if left null, assumes no difference
 #	Pi1: hidden state initial probability vector for treatment group (same as Pi0, requires rx to be specified); if left null, assumes no difference
-#	fitRx: a logical vector of length two: fitRx[1] is whether to fit intitial probably treatment probabilities separately for Rx and Control; fitRx[2] fits separate tpms
+#	fitRx: a logical vector of length two: fitRx[1] is whether to fit initial treatment probabilities separately for Rx and Control; fitRx[2] fits separate tpms
 #
 # 	Returns as a list everything you need to start computation: 
 #	y1: generated response 1 (Binomial) as a matrix, 1 row per subject
